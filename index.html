@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Abdul Basit — Software Engineer</title>
+    <meta name="description" content="Portfolio of Abdul Basit — Software Engineer specializing in Python, Django, FastAPI, and MERN Stack. Building scalable APIs and AI-driven systems."/>
+    <meta property="og:title" content="Abdul Basit — Software Engineer"/>
+    <meta property="og:description" content="Full Stack Developer | Django | FastAPI | MERN | AI/RAG Systems"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg-fixed">
+        <img alt="" src="bg.png"/>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">AB</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle desktop-theme" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div class="mobile-controls">
+                <button class="theme-toggle mobile-theme" id="mobileThemeToggle" aria-label="Toggle theme">
+                    <span class="icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    </span>
+                </button>
+                <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-avatar">
+                <img src="PortFolioImage.png" alt="Abdul Basit" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                <span class="avatar-initials" style="display: none;">AB</span>
+            </div>
+            <h1 class="hero-name">Abdul Basit</h1>
+            <p class="hero-title">Software Engineer</p>
+            <p class="hero-sub">Django · FastAPI · MERN · AI/RAG Systems</p>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="section-inner">
+                <h2 class="section-title">About</h2>
+                <div class="about-text">
+                    <p>Software Engineer with practical experience in backend development and full-stack applications using Python (Django, FastAPI) and MERN Stack. Proven ability to build scalable APIs, implement CI/CD pipelines, and integrate AI-driven systems such as RAG (Qdrant + OpenAI).</p>
+                    <p>Currently working at Zweidevs Pvt Limited, building production-ready systems including career guidance platforms with AI-powered recommendations and ERP integrations. Bachelor's in Software Engineering from University of Central Punjab with a 3.67 GPA.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <div class="section-inner">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3 class="skill-label">BACKEND</h3>
+                        <div class="skill-pills">
+                            <span class="pill">Python</span>
+                            <span class="pill">Django</span>
+                            <span class="pill">DRF</span>
+                            <span class="pill">FastAPI</span>
+                            <span class="pill">Node.js</span>
+                            <span class="pill">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-label">FRONTEND</h3>
+                        <div class="skill-pills">
+                            <span class="pill">React</span>
+                            <span class="pill">JavaScript</span>
+                            <span class="pill">HTML</span>
+                            <span class="pill">CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-label">AI / DATA</h3>
+                        <div class="skill-pills">
+                            <span class="pill">OpenAI API</span>
+                            <span class="pill">LangChain</span>
+                            <span class="pill">Qdrant</span>
+                            <span class="pill">FAISS</span>
+                            <span class="pill">RAG</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-label">DATABASES</h3>
+                        <div class="skill-pills">
+                            <span class="pill">PostgreSQL</span>
+                            <span class="pill">MongoDB</span>
+                            <span class="pill">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-label">DEVOPS & TOOLS</h3>
+                        <div class="skill-pills">
+                            <span class="pill">Git</span>
+                            <span class="pill">GitHub Actions</span>
+                            <span class="pill">Docker</span>
+                            <span class="pill">AWS EB</span>
+                            <span class="pill">CI/CD</span>
+                            <span class="pill">Jira</span>
+                            <span class="pill">Trello</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-label">LANGUAGES</h3>
+                        <div class="skill-pills">
+                            <span class="pill">Java</span>
+                            <span class="pill">C++</span>
+                            <span class="pill">C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <div class="section-inner">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <a href="https://github.com/Abdul-Basit-Razzaq/CustomRag" target="_blank" class="project-card">
+                        <div class="project-badge">AI / RAG</div>
+                        <h3 class="project-name">Custom RAG System</h3>
+                        <p class="project-desc">Legal document Q&A system using Retrieval-Augmented Generation. Upload PDFs and query them with natural language. Semantic search with FAISS vector embeddings and GPT-3.5-turbo for context-driven responses.</p>
+                        <div class="project-tags">
+                            <span>FastAPI</span><span>LangChain</span><span>OpenAI</span><span>FAISS</span>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-badge">PRODUCTION</div>
+                        <h3 class="project-name">CareerGuidance Platform</h3>
+                        <p class="project-desc">Full-stack career guidance platform with RAG-based recommendation system using Qdrant and OpenAI. Integrated Stripe payments, QuickBooks ERP, and deployed on AWS Elastic Beanstalk.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>Qdrant</span><span>OpenAI</span><span>Stripe</span><span>AWS</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Kamran-Sajjad/communityfix" target="_blank" class="project-card">
+                        <div class="project-badge">FULL STACK</div>
+                        <h3 class="project-name">CommunityFix</h3>
+                        <p class="project-desc">Role-based community issue management platform. Real-time issue reporting with dedicated roles for residents, administrators, and service teams. Secure auth and Twilio integration.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Twilio</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Abdul-Basit-Razzaq/" target="_blank" class="project-card">
+                        <div class="project-badge">DEVOPS</div>
+                        <h3 class="project-name">CI/CD Pipelines</h3>
+                        <p class="project-desc">Designed and implemented CI/CD pipelines using GitHub Actions with YAML workflows. Automated build, test, and deployment processes across multiple projects.</p>
+                        <div class="project-tags">
+                            <span>GitHub Actions</span><span>YAML</span><span>Docker</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="section-inner">
+                <h2 class="section-title">Contact</h2>
+                <p class="contact-sub">Let's connect — feel free to reach out.</p>
+                <div class="contact-cards">
+                    <a href="mailto:ab4382906@gmail.com" class="contact-card">
+                        <div class="contact-icon">✉</div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">ab4382906@gmail.com</div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abdul-basit-ibn-razzaq" target="_blank" class="contact-card">
+                        <div class="contact-icon">in</div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">abdul-basit-ibn-razzaq</div>
+                    </a>
+                    <a href="https://github.com/Abdul-Basit-Razzaq" target="_blank" class="contact-card">
+                        <div class="contact-icon">⌘</div>
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value">Abdul-Basit-Razzaq</div>
+                    </a>
+                    <a href="tel:+923213824299" class="contact-card">
+                        <div class="contact-icon">☎</div>
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+92 321 382 4299</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-name">Abdul Basit</div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/abdul-basit-ibn-razzaq" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Abdul-Basit-Razzaq" target="_blank">GitHub</a>
+                <a href="mailto:ab4382906@gmail.com">Email</a>
+            </div>
+            <div class="footer-copy">© 2026 Abdul Basit. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -42,20 +42,22 @@ window.addEventListener('scroll', () => {
 const themeToggles = document.querySelectorAll('.theme-toggle');
 const htmlEl = document.documentElement;
 
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        htmlEl.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        htmlEl.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
 // Check for saved user preference, if any, on load of the website
 const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-    htmlEl.setAttribute('data-theme', currentTheme);
-}
+applyTheme(currentTheme === 'dark' ? 'dark' : 'light');
 
 themeToggles.forEach(toggle => {
     toggle.addEventListener('click', () => {
-        if (htmlEl.getAttribute('data-theme') === 'dark') {
-            htmlEl.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-        } else {
-            htmlEl.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        }
+        applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     });
 });

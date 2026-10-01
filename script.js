@@ -7,6 +7,9 @@ const themeToggles = document.querySelectorAll('.theme-toggle');
 const editorTabs = document.querySelectorAll('.editor-tab');
 const profileCode = document.getElementById('profileCode');
 const profileEditor = document.getElementById('profileEditor');
+const profileImageTrigger = document.getElementById('profileImageTrigger');
+const profileViewer = document.getElementById('profileViewer');
+const profileViewerCloseButtons = document.querySelectorAll('[data-profile-close]');
 
 const profileData = {
     json: `{
@@ -151,8 +154,6 @@ renderProfile('json');
 
 const heroWelcomeText = document.getElementById('heroWelcomeText');
 const heroWelcomeCursor = document.getElementById('heroWelcomeCursor');
-const heroTaglineText = document.getElementById('heroTaglineText');
-const heroTaglineCursor = document.getElementById('heroTaglineCursor');
 const aboutMotionQuoteText = document.getElementById('aboutMotionQuoteText');
 const aboutMotionCursor = document.getElementById('aboutMotionCursor');
 
@@ -162,9 +163,6 @@ const welcomeMessages = [
     'Hello',
     'Hi',
 ];
-
-const heroTagline =
-    'Backend engineering, AI systems, and full-stack delivery with calm, production-ready detail.';
 
 const aboutMotionQuotes = [
     'Good design should feel quiet, confident, and easy to trust.',
@@ -229,17 +227,6 @@ async function runWelcomeLoop() {
     }
 }
 
-async function runHeroTaglineTypewriter() {
-    if (!heroTaglineText) {
-        return;
-    }
-
-    setCursorVisible(heroTaglineCursor, true);
-    await wait(400);
-    await typeInto(heroTaglineText, heroTagline, 42);
-    setCursorVisible(heroTaglineCursor, false);
-}
-
 async function runAboutMotionTypewriter() {
     if (!aboutMotionQuoteText) {
         return;
@@ -259,7 +246,40 @@ async function runAboutMotionTypewriter() {
 }
 
 runWelcomeLoop();
-runHeroTaglineTypewriter();
+
+function openProfileViewer() {
+    if (!profileViewer) {
+        return;
+    }
+
+    profileViewer.classList.add('open');
+    profileViewer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProfileViewer() {
+    if (!profileViewer) {
+        return;
+    }
+
+    profileViewer.classList.remove('open');
+    profileViewer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+if (profileImageTrigger) {
+    profileImageTrigger.addEventListener('click', openProfileViewer);
+}
+
+profileViewerCloseButtons.forEach(button => {
+    button.addEventListener('click', closeProfileViewer);
+});
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        closeProfileViewer();
+    }
+});
 
 const aboutMotionSection = document.querySelector('.about-motion');
 if (aboutMotionSection && 'IntersectionObserver' in window) {

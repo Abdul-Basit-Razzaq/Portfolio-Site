@@ -27,9 +27,9 @@
 
     <nav class="nav" id="navbar">
         <div class="nav-inner">
-            <div class="nav-logo">
+            <button class="nav-logo nav-logo-button" id="profileImageTrigger" type="button" aria-label="View profile picture">
                 <img src="PortFolioImage.png" alt="Abdul Basit" class="nav-logo-image" />
-            </div>
+            </button>
             <div class="nav-links" id="navLinks">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
@@ -97,13 +97,26 @@
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
+    <div class="profile-viewer" id="profileViewer" aria-hidden="true">
+        <div class="profile-viewer-backdrop" data-profile-close></div>
+        <div class="profile-viewer-sheet" role="dialog" aria-modal="true" aria-labelledby="profileViewerTitle">
+            <button class="profile-viewer-close" type="button" data-profile-close aria-label="Close image viewer">×</button>
+            <img src="PortFolioImage.png" alt="Abdul Basit" class="profile-viewer-image" />
+            <div class="profile-viewer-caption">
+                <span class="profile-viewer-kicker" id="profileViewerTitle">Profile picture</span>
+                <strong>Abdul Basit</strong>
+                <p>Tap outside the image or press Escape to close.</p>
+            </div>
+        </div>
+    </div>
+
     <main>
         <section class="hero" id="home">
             <div class="hero-copy">
                 <p class="eyebrow">Software Engineer · Backend, AI / RAG, Full Stack</p>
                 <h1>Backend engineering, AI systems, and full-stack delivery with calm, production-ready detail.</h1>
-                <p class="hero-lead">I turn Python, Django, FastAPI, React, and AI workflows into polished systems that
-                    are easy to explain, easy to trust, and ready to ship.</p>
+                <!-- <p class="hero-lead">I turn Python, Django, FastAPI, React, and AI workflows into polished systems that
+                    are easy to explain, easy to trust, and ready to ship.</p> -->
                 <div class="hero-actions">
                     <a href="#projects" class="button button-primary">View selected work</a>
                     <a href="#contact" class="button button-secondary">Contact me</a>
@@ -122,16 +135,11 @@
                         <div class="hero-static-card hero-static-card-a"></div>
                         <div class="hero-static-card hero-static-card-b"></div>
                         <div class="hero-static-panel">
-                            <!-- <span class="hero-core-label">Portfolio highlight</span> -->
                             <div class="hero-quote">
                                 <p class="hero-welcome-line">
                                     <span class="hero-welcome-text" id="heroWelcomeText"></span><span
                                         class="type-cursor welcome-cursor" id="heroWelcomeCursor"
                                         aria-hidden="true"></span>
-                                </p>
-                                <p class="hero-tagline-line">
-                                    <span id="heroTaglineText"></span><span class="type-cursor tagline-cursor"
-                                        id="heroTaglineCursor" aria-hidden="true"></span>
                                 </p>
                             </div>
                         </div>

@@ -4,28 +4,32 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Abdul Basit — Software Engineer</title>
+    <title>Abdul Basit — Software Engineer | Backend, AI & Full Stack</title>
     <meta name="description"
-        content="Portfolio of Abdul Basit — Software Engineer specializing in Python, Django, FastAPI, and MERN Stack. Building scalable APIs and AI-driven systems." />
+        content="Portfolio of Abdul Basit — Software Engineer specializing in Python, Django, FastAPI, React, and AI-driven systems." />
     <meta property="og:title" content="Abdul Basit — Software Engineer" />
-    <meta property="og:description" content=" Django | FastAPI | MERN | AI/RAG Systems" />
+    <meta property="og:description" content="Backend engineering, AI/RAG systems, and full-stack product delivery." />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- Background -->
-    <div class="bg-fixed">
-        <img alt="" src="bg.png" />
+    <div class="site-bg" aria-hidden="true">
+        <div class="site-bg-grid"></div>
+        <div class="site-bg-orb orb-a"></div>
+        <div class="site-bg-orb orb-b"></div>
+        <div class="site-bg-orb orb-c"></div>
     </div>
 
-    <!-- Navigation -->
     <nav class="nav" id="navbar">
         <div class="nav-inner">
-            <div class="nav-logo">AB</div>
+            <div class="nav-logo">
+                <img src="PortFolioImage.png" alt="Abdul Basit" class="nav-logo-image" />
+            </div>
             <div class="nav-links" id="navLinks">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
@@ -85,7 +89,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#home" class="mobile-link">Home</a>
         <a href="#about" class="mobile-link">About</a>
@@ -95,39 +98,115 @@
     </div>
 
     <main>
-        <!-- Hero -->
         <section class="hero" id="home">
-            <div class="hero-avatar">
-                <img src="PortFolioImage.png" alt="Abdul Basit" class="profile-img"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-                <span class="avatar-initials" style="display: none;">AB</span>
+            <div class="hero-copy">
+                <p class="eyebrow">Software Engineer · Backend, AI / RAG, Full Stack</p>
+                <h1>Backend engineering, AI systems, and full-stack delivery with calm, production-ready detail.</h1>
+                <p class="hero-lead">I turn Python, Django, FastAPI, React, and AI workflows into polished systems that
+                    are easy to explain, easy to trust, and ready to ship.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="button button-primary">View selected work</a>
+                    <a href="#contact" class="button button-secondary">Contact me</a>
+                </div>
+                <div class="hero-chips" aria-label="Core strengths">
+                    <span>Backend APIs</span>
+                    <span>AI / RAG</span>
+                    <span>CI/CD</span>
+                    <span>React UI</span>
+                </div>
             </div>
-            <h1 class="hero-name">Abdul Basit</h1>
-            <p class="hero-title">Software Engineer</p>
-            <p class="hero-sub">Django · FastAPI · MERN · AI/RAG Systems</p>
-        </section>
-
-        <!-- About -->
-        <section class="section" id="about">
-            <div class="section-inner">
-                <h2 class="section-title">About</h2>
-                <div class="about-text">
-                    <p>Software Engineer with practical experience in backend development and full-stack applications
-                        using Python (Django, FastAPI) and MERN Stack. Proven ability to build scalable APIs, implement
-                        CI/CD pipelines, and integrate AI-driven systems such as RAG (Qdrant + OpenAI).</p>
-                    <p>Currently working at Zweidevs Pvt Limited, building production-ready systems including career
-                        guidance platforms with AI-powered recommendations and ERP integrations. Bachelor's in Software
-                        Engineering from University of Central Punjab with a 3.67 GPA.</p>
+            <div class="hero-visual">
+                <div class="hero-frame">
+                    <div class="hero-frame-glow"></div>
+                    <div class="hero-static" aria-hidden="true">
+                        <div class="hero-static-card hero-static-card-a"></div>
+                        <div class="hero-static-card hero-static-card-b"></div>
+                        <div class="hero-static-panel">
+                            <!-- <span class="hero-core-label">Portfolio highlight</span> -->
+                            <div class="hero-quote">
+                                <p class="hero-welcome-line">
+                                    <span class="hero-welcome-text" id="heroWelcomeText"></span><span
+                                        class="type-cursor welcome-cursor" id="heroWelcomeCursor"
+                                        aria-hidden="true"></span>
+                                </p>
+                                <p class="hero-tagline-line">
+                                    <span id="heroTaglineText"></span><span class="type-cursor tagline-cursor"
+                                        id="heroTaglineCursor" aria-hidden="true"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-cards">
+                    <article class="mini-card">
+                        <span class="mini-label">Current role</span>
+                        <strong>Software Engineer at Zweidevs</strong>
+                        <p>Building production systems with AI features, backend logic, and deployment discipline.</p>
+                    </article>
+                    <article class="mini-card">
+                        <span class="mini-label">Core stack</span>
+                        <strong>Python · Django · FastAPI</strong>
+                        <p>Backend-first delivery with React, PostgreSQL, Docker, GitHub Actions, and AWS EB.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section class="section" id="skills">
+        <section class="section reveal" id="about">
             <div class="section-inner">
-                <h2 class="section-title">Skills</h2>
+                <div class="section-heading section-heading--compact">
+                    <p class="section-kicker">About</p>
+                </div>
+                <div class="about-layout">
+                    <div class="about-text">
+                        <p>Software Engineer with practical experience in backend development and full-stack
+                            applications using Python, Django, FastAPI, and the MERN stack. I build scalable APIs,
+                            automate delivery with CI/CD, and integrate AI-driven systems such as RAG with Qdrant and
+                            OpenAI.</p>
+                        <p>Currently working at Zweidevs Pvt Limited on production-ready systems including career
+                            guidance platforms with AI-powered recommendations and ERP integrations. I hold a Bachelor’s
+                            in Software Engineering from the University of Central Punjab with a 3.67 GPA.</p>
+                    </div>
+                    <div class="about-facts">
+                        <div class="fact-card">
+                            <span class="fact-label">Current role</span>
+                            <strong>Software Engineer</strong>
+                            <p>Zweidevs Pvt Limited</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-label">Education</span>
+                            <strong>BS Software Engineering</strong>
+                            <p>University of Central Punjab, GPA 3.67</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-label">Focus</span>
+                            <strong>Backend + AI products</strong>
+                            <p>Django, FastAPI, RAG, React, deployment</p>
+                        </div>
+                    </div>
+                    <div class="about-motion" aria-hidden="true">
+                        <div class="about-motion-orb orb-one"></div>
+                        <div class="about-motion-orb orb-two"></div>
+                        <div class="about-motion-panel">
+                            <span class="section-note">Movement lives here</span>
+                            <strong>Animated but calmer</strong>
+                            <div class="about-motion-quote">
+                                <span id="aboutMotionQuoteText"></span><span class="type-cursor about-motion-cursor"
+                                    id="aboutMotionCursor" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="skills">
+            <div class="section-inner">
+                <div class="section-heading section-heading--compact">
+                    <p class="section-kicker">Skills</p>
+                </div>
                 <div class="skills-grid">
-                    <div class="skill-group">
+                    <div class="skill-group reveal-card">
                         <h3 class="skill-label">BACKEND</h3>
                         <div class="skill-pills">
                             <span class="pill">Python</span>
@@ -138,7 +217,7 @@
                             <span class="pill">REST APIs</span>
                         </div>
                     </div>
-                    <div class="skill-group">
+                    <div class="skill-group reveal-card">
                         <h3 class="skill-label">FRONTEND</h3>
                         <div class="skill-pills">
                             <span class="pill">React</span>
@@ -147,7 +226,7 @@
                             <span class="pill">CSS</span>
                         </div>
                     </div>
-                    <div class="skill-group">
+                    <div class="skill-group reveal-card">
                         <h3 class="skill-label">TESTING</h3>
                         <div class="skill-pills">
                             <span class="pill">Automated Software Testing</span>
@@ -155,7 +234,7 @@
                             <span class="pill">Playwright</span>
                         </div>
                     </div>
-                    <div class="skill-group">
+                    <div class="skill-group reveal-card">
                         <h3 class="skill-label">AI / DATA</h3>
                         <div class="skill-pills">
                             <span class="pill">OpenAI API</span>
@@ -165,15 +244,14 @@
                             <span class="pill">RAG</span>
                         </div>
                     </div>
-                    <div class="skill-group">
+                    <div class="skill-group reveal-card">
                         <h3 class="skill-label">DATABASES</h3>
                         <div class="skill-pills">
                             <span class="pill">PostgreSQL</span>
-                            <span class="pill">MongoDB</span>
                             <span class="pill">SQL</span>
                         </div>
                     </div>
-                    <div class="skill-group">
+                    <div class="skill-group reveal-card">
                         <h3 class="skill-label">DEVOPS & TOOLS</h3>
                         <div class="skill-pills">
                             <span class="pill">Git</span>
@@ -185,7 +263,7 @@
                             <span class="pill">Trello</span>
                         </div>
                     </div>
-                    <div class="skill-group">
+                    <div class="skill-group reveal-card">
                         <h3 class="skill-label">LANGUAGES</h3>
                         <div class="skill-pills">
                             <span class="pill">Java</span>
@@ -197,77 +275,125 @@
             </div>
         </section>
 
-        <!-- Projects -->
-        <section class="section" id="projects">
+        <section class="section reveal" id="editor">
             <div class="section-inner">
-                <h2 class="section-title">Projects</h2>
+                <div class="section-heading">
+                    <p class="section-kicker">Profile editor</p>
+                    <!-- <h2 class="section-title">One block that can switch between JSON and XML for your complete portfolio data.</h2> -->
+                </div>
+                <div class="editor-shell">
+                    <article class="editor-card reveal-card">
+                        <div class="editor-top">
+                            <div>
+                                <p class="editor-kicker">Structured data</p>
+                                <h3 class="editor-title">Portfolio profile</h3>
+                                <p class="editor-subtitle">Switch formats depending on how you want to embed or export
+                                    your information.</p>
+                            </div>
+                            <div class="editor-actions" role="tablist" aria-label="Profile format">
+                                <button class="editor-tab active" data-format="json" aria-pressed="true">JSON</button>
+                                <button class="editor-tab" data-format="xml" aria-pressed="false">XML</button>
+                            </div>
+                        </div>
+                        <pre class="code-editor" id="profileEditor"
+                            aria-live="polite"><div class="code-editor-header"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span><span class="code-filename">portfolio.json</span></div><code class="code-content" id="profileCode"></code></pre>
+                    </article>
+                    <aside class="editor-card-side">
+                        <div class="info-card reveal-card">
+                            <span class="section-note">Current focus</span>
+                            <strong>Backend, AI, and product quality</strong>
+                            <!-- <p>Use this card to show the narrative that agencies scan in seconds.</p> -->
+                        </div>
+                        <div class="info-card reveal-card">
+                            <div class="info-row"><span class="info-label">Role</span><span class="info-value">Software
+                                    Engineer</span></div>
+                            <div class="info-row"><span class="info-label">Location</span><span
+                                    class="info-value">Lahore,Pakistan</span></div>
+                            <div class="info-row"><span class="info-label">Email</span><span
+                                    class="info-value">969basitabdul@gmail.com</span></div>
+                            <div class="info-row"><span class="info-label">Stack</span><span class="info-value">Django,
+                                    FastAPI, React, RAG</span></div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="projects">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <p class="section-kicker">Selected work</p>
+                    <!-- <h2 class="section-title">Projects should show scope, reasoning, and the kind of problems you solve.</h2> -->
+                </div>
                 <div class="projects-grid">
-                    <a href="https://github.com/Abdul-Basit-Razzaq/CustomRag" target="_blank" class="project-card">
+                    <a href="https://github.com/Abdul-Basit-Razzaq/CustomRag" target="_blank" rel="noreferrer"
+                        class="project-card reveal-card">
                         <div class="project-badge">AI / RAG</div>
                         <h3 class="project-name">Custom RAG System</h3>
-                        <p class="project-desc">Legal document Q&A system using Retrieval-Augmented Generation. Upload
-                            PDFs and query them with natural language. Semantic search with FAISS vector embeddings and
-                            GPT-3.5-turbo for context-driven responses.</p>
+                        <p class="project-desc">Legal document Q&A system that lets users upload PDFs and query them in
+                            natural language. Built with semantic retrieval, FAISS embeddings, and GPT-based responses.
+                        </p>
                         <div class="project-tags">
                             <span>FastAPI</span><span>LangChain</span><span>OpenAI</span><span>FAISS</span>
                         </div>
                     </a>
                     <a href="https://github.com/Abdul-Basit-Razzaq/Free-Page-Translator" target="_blank"
-                        class="project-card">
+                        rel="noreferrer" class="project-card reveal-card">
                         <div class="project-badge">FIREFOX EXTENSION</div>
                         <h3 class="project-name">Free Page Translator</h3>
-                        <p class="project-desc">A lightweight Firefox extension that automatically detects and
-                            translates web pages while preserving the original HTML structure and dynamic content. Built
-                            with smart caching, MutationObserver updates, and one-click page restore.</p>
+                        <p class="project-desc">Firefox extension that automatically detects and translates pages while
+                            preserving dynamic content. Uses DOM observation, caching, and one-click restore flows.</p>
                         <div class="project-tags">
                             <span>Firefox</span><span>MutationObserver</span><span>TreeWalker</span><span>JavaScript</span>
                         </div>
                     </a>
-                    <a href="https://github.com/Abdul-Basit-Razzaq/Hotel_System_Java" target="_blank"
-                        class="project-card">
+                    <a href="https://github.com/Abdul-Basit-Razzaq/Hotel_System_Java" target="_blank" rel="noreferrer"
+                        class="project-card reveal-card">
                         <div class="project-badge">JAVA</div>
                         <h3 class="project-name">Hotel System</h3>
                         <p class="project-desc">Hotel management system built in Java for reservations, room tracking,
-                            and operational management with a structured backend design.</p>
+                            and operational workflows with a structured backend design.</p>
                         <div class="project-tags">
                             <span>Java</span><span>OOP</span><span>Bookings</span>
                         </div>
                     </a>
-                    <a href="https://github.com/Abdul-Basit-Razzaq/Klippify" target="_blank" class="project-card">
+                    <a href="https://github.com/Abdul-Basit-Razzaq/Klippify" target="_blank" rel="noreferrer"
+                        class="project-card reveal-card">
                         <div class="project-badge">BACKEND</div>
                         <h3 class="project-name">Klipify Backend</h3>
-                        <p class="project-desc">Backend service for downloading YouTube short videos, focused on
-                            processing media requests and handling the download workflow efficiently.</p>
+                        <p class="project-desc">Backend service for downloading short-form YouTube videos, focused on
+                            request handling and media-processing workflows.</p>
                         <div class="project-tags">
                             <span>Backend</span><span>Video Download</span><span>API</span>
                         </div>
                     </a>
-                    <a href="https://github.com/2020zwei/career-backend" target="_blank" class="project-card">
+                    <a href="https://github.com/2020zwei/career-backend" target="_blank" rel="noreferrer"
+                        class="project-card reveal-card">
                         <div class="project-badge">PRODUCTION</div>
                         <h3 class="project-name">CareerGuidance Platform</h3>
-                        <p class="project-desc">Full-stack career guidance platform with RAG-based recommendation system
-                            using Qdrant and OpenAI. Integrated Stripe payments, and deployed on AWS Elastic Beanstalk.
+                        <p class="project-desc">Full-stack career guidance platform with a RAG-based recommendation
+                            system using Qdrant and OpenAI, plus Stripe payments and AWS Elastic Beanstalk deployment.
                         </p>
                         <div class="project-tags">
                             <span>Django</span><span>Qdrant</span><span>OpenAI</span><span>Stripe</span><span>AWS</span>
                         </div>
                     </a>
-                    <a href="https://github.com/Kamran-Sajjad/communityfix" target="_blank" class="project-card">
+                    <a href="https://github.com/Kamran-Sajjad/communityfix" target="_blank" rel="noreferrer"
+                        class="project-card reveal-card">
                         <div class="project-badge">FULL STACK</div>
                         <h3 class="project-name">CommunityFix</h3>
-                        <p class="project-desc">Role-based community issue management platform. Real-time issue
-                            reporting with dedicated roles for residents, administrators, and service teams. Secure auth
-                            and Twilio integration.</p>
+                        <p class="project-desc">Role-based community issue management platform with real-time issue
+                            reporting for residents, administrators, and service teams.</p>
                         <div class="project-tags">
                             <span>React</span><span>Node.js</span><span>MongoDB</span><span>Twilio</span>
                         </div>
                     </a>
                     <a href="https://github.com/Abdul-Basit-Razzaq/Blogging-Website-ci-workflows-" target="_blank"
-                        class="project-card">
+                        rel="noreferrer" class="project-card reveal-card">
                         <div class="project-badge">DEVOPS</div>
                         <h3 class="project-name">CI/CD Pipelines</h3>
-                        <p class="project-desc">Designed and implemented CI/CD pipelines using GitHub Actions with YAML
-                            workflows. Automated build, test, and deployment processes across multiple projects.</p>
+                        <p class="project-desc">CI/CD workflows built with GitHub Actions and YAML to automate build,
+                            test, and deployment steps across multiple projects.</p>
                         <div class="project-tags">
                             <span>GitHub Actions</span><span>YAML</span><span>Docker</span>
                         </div>
@@ -276,28 +402,32 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="section" id="contact">
+        <section class="section reveal" id="contact">
             <div class="section-inner">
-                <h2 class="section-title">Contact</h2>
-                <p class="contact-sub">Let's connect — feel free to reach out.</p>
+                <div class="section-heading">
+                    <p class="section-kicker">Contact</p>
+                    <!-- <h2 class="section-title">Keep this section concise and easy to scan.</h2> -->
+                </div>
+                <p class="contact-sub">Let’s connect if you’re hiring for backend, AI, or full-stack roles.</p>
                 <div class="contact-cards">
-                    <a href="mailto:ab4382906@gmail.com" class="contact-card">
+                    <a href="mailto:969basitabdul@gmail.com" class="contact-card reveal-card">
                         <div class="contact-icon">✉</div>
                         <div class="contact-label">Email</div>
-                        <div class="contact-value">ab4382906@gmail.com</div>
+                        <div class="contact-value">969basitabdul@gmail.com</div>
                     </a>
-                    <a href="https://www.linkedin.com/in/abdul-basit-ibn-razzaq" target="_blank" class="contact-card">
+                    <a href="https://www.linkedin.com/in/abdul-basit-ibn-razzaq" target="_blank" rel="noreferrer"
+                        class="contact-card reveal-card">
                         <div class="contact-icon">in</div>
                         <div class="contact-label">LinkedIn</div>
                         <div class="contact-value">abdul-basit-ibn-razzaq</div>
                     </a>
-                    <a href="https://github.com/Abdul-Basit-Razzaq" target="_blank" class="contact-card">
+                    <a href="https://github.com/Abdul-Basit-Razzaq" target="_blank" rel="noreferrer"
+                        class="contact-card reveal-card">
                         <div class="contact-icon">⌘</div>
                         <div class="contact-label">GitHub</div>
                         <div class="contact-value">Abdul-Basit-Razzaq</div>
                     </a>
-                    <a href="tel:+923213824299" class="contact-card">
+                    <a href="tel:+923213824299" class="contact-card reveal-card">
                         <div class="contact-icon">☎</div>
                         <div class="contact-label">Phone</div>
                         <div class="contact-value">+92-321-38299</div>
@@ -307,7 +437,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-copy">© 2026 All rights reserved.</div>

@@ -836,7 +836,7 @@ html[data-theme="dark"] .profile-viewer-close {
 
 .hero-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 14px;
     align-items: stretch;
 }
@@ -1047,7 +1047,7 @@ html[data-theme="dark"] .about-motion-panel {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 18px;
 }
 
@@ -1073,7 +1073,7 @@ html[data-theme="dark"] .about-motion-panel {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 18px;
 }
 
@@ -1357,10 +1357,22 @@ html[data-theme="dark"] .editor-tab.active {
 
 .contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 16px;
-    max-width: 980px;
+    max-width: 1180px;
     margin: 0 auto;
+}
+
+.hero-cards > *,
+.skills-grid > *,
+.projects-grid > *,
+.highlight-grid > *,
+.contact-cards > *,
+.about-facts > *,
+.editor-shell > *,
+.editor-card-side > * {
+    width: 100%;
+    min-width: 0;
 }
 
 .contact-card {

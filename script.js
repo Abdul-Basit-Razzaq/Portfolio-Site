@@ -20,7 +20,7 @@ const profileData = {
     "backend": ["Python", "Django", "FastAPI", "DRF"],
     "frontend": ["React", "JavaScript", "HTML", "CSS"],
     "ai": ["OpenAI", "LangChain", "Qdrant", "FAISS"],
-    "devops": ["Docker", "GitHub Actions", "AWS EB", "CI/CD"]
+    "devops": ["GitHub Actions", "AWS EB", "CI/CD"]
   },
   "currentRole": "Software Engineer at Zweidevs Pvt Limited",
   "education": "BS Software Engineering, UCP"
@@ -37,7 +37,7 @@ const profileData = {
     <backend>Python, Django, FastAPI, DRF</backend>
     <frontend>React, JavaScript, HTML, CSS</frontend>
     <ai>OpenAI, LangChain, Qdrant, FAISS</ai>
-    <devops>Docker, GitHub Actions, AWS EB, CI/CD</devops>
+    <devops>GitHub Actions, AWS EB, CI/CD</devops>
   </stack>
   <currentRole>Software Engineer at Zweidevs Pvt Limited</currentRole>
   <education>BS Software Engineering, UCP</education>
